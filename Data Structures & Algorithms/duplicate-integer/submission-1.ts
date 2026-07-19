@@ -1,0 +1,14 @@
+class Solution {
+    /**
+     * @param {number[]} nums
+     * @return {boolean}
+     */
+    hasDuplicate(nums: number[]): boolean {
+        const map = new Map<number, number>();
+        for(let i = 0; i < nums.length; i++){
+            if(map.get(nums[i]) !== undefined) return true;
+            map.set(nums[i], i);
+        }
+    return false;
+    }
+}
